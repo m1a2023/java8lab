@@ -9,7 +9,7 @@ import java.lang.ProcessBuilder;
 public class Task01Main {
     public static void main(String[] args) throws IOException, InterruptedException {
         System.out.println(extractSoundName(
-            new File("/home/mia/dev/csu/java/java8lab/task01/src/main/resources/3726.mp3"))
+            new File("C:\\Users\\Maxim\\dev\\csu\\java\\java8lab\\task01\\src\\main\\resources\\3724.mp3"))
         );
     }
     
@@ -17,12 +17,13 @@ public class Task01Main {
         
         ProcessBuilder processBuilder = 
             new ProcessBuilder(                                         
-                "ffprobe", "-v", "error", "-of", "flat", "-show_format", 
+                "C:\\Users\\Maxim\\dev\\csu\\java\\ffmpeg\\bin\\ffprobe.exe",
+                    "-v", "error", "-of", "flat", "-show_format",
                 file.getAbsolutePath()                                   
             );
         
         Process process = processBuilder.start();
-        
+
         String generalOutput = getGeneralOutput(process.getInputStream());
 
         return findTitle(generalOutput); 
