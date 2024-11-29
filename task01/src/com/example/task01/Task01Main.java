@@ -12,7 +12,7 @@ public class Task01Main {
             new File("/home/mia/dev/csu/java/java8lab/task01/src/main/resources/3726.mp3"))
         );
     }
-
+    
     public static String extractSoundName(File file) throws IOException, InterruptedException {
         
         ProcessBuilder processBuilder = 
